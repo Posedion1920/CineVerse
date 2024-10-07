@@ -38,11 +38,19 @@ h2{
     font-size: 36px;
 }
 
-h3,nav>ul>li a{
+h3{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 32px;
+}
+
+
+nav>ul>li a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
 }
 
 
@@ -51,15 +59,15 @@ h3,nav>ul>li a{
 header{
     background-color: var(--BackGroundColor);
     box-shadow: 0px 1px 7.7px rgba(0, 0, 0, 0.3);
-    height: 10vh;
-    margin-bottom: 8rem;
+    height: 15vh;
+    margin-bottom: 32px;
 }
 
 header>nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 6rem 0px 6rem;
+    padding: 1rem 6rem 0px 6rem;
 }
 
 header>nav>div{
@@ -72,7 +80,7 @@ header>nav>ul{
     list-style-type: none;
     align-items: center;
     padding: 0px;
-    gap: 5rem;
+    gap: 3.5rem;
 }
 
 nav>ul a{
@@ -122,7 +130,6 @@ footer>div>ul>li i{
 }
 
 .movieSection div{
-    grid-column: 2;
     width: 445px;
     align-self: start;
 }
@@ -162,6 +169,35 @@ footer>div>ul>li i{
     color: black;
 }
 
+.movieSection:last-of-type div{
+    width: 456px;
+}
+
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 450ms;
+}
+
+.card:hover{
+    scale: 1.1;
+    transition: 450ms;
+    cursor: pointer;
+}
+
+
+.search{
+    margin: 200px;
+}
+
+.search input{
+    padding: 1.7rem 3rem;
+    width: 50%;
+    border-radius: 100px;
+    box-sizing: border-box;
+    border: none;
+
+}
 
 
 
