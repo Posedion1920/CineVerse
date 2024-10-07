@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0px;
+    background-color: var(--BackGroundColor);
+}
+
+/* Styleguide */
+:root{
+    --BackGroundColor: #2F4F4F;
+    --CardColor: #ADD8E6;
+}
+
+p,h1,h2,h3{
+    margin: 0px;
+    color: white;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+}
+
+h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+}
+
+h3,nav>ul>li a{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+}
+
+
+/* Header$Navn og foooter */
+
+header{
+    background-color: var(--BackGroundColor);
+    box-shadow: 0px 1px 7.7px rgba(0, 0, 0, 0.3);
+    height: 10vh;
+}
+
+header>nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 6rem 0px 6rem;
+}
+
+header>nav>div{
+    display: flex;
+    gap: 5px;
+}
+
+header>nav>ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    padding: 0px;
+    gap: 5rem;
+}
+
+nav>ul a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    background-color: var(--BackGroundColor);
+    box-shadow: -10px 0px 7.7px rgba(0, 0, 0, 0.25);
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 6.5rem;
+}
+
+footer div:first-of-type{
+    display: flex;
+    gap: 5px;
+}
+
+footer>div>ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+footer>div>ul>li i{
+    font-size: 42px;
+}
+
+.fa-facebook{
+    color: #1877F2;
+}
+
+.fa-youtube{
+    color: #FF0000;
+}
+
+
+/* Forside */
+.movieSection{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.movieSection div{
+    grid-column: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
