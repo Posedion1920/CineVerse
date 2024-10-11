@@ -70,7 +70,7 @@ header>nav{
     padding: 1rem 6rem 0px 6rem;
 }
 
-header>nav>div{
+header>nav>a div{
     display: flex;
     gap: 5px;
 }
@@ -190,7 +190,7 @@ footer>div>ul>li i{
 }
 
 .card:hover{
-    scale: 1.1;
+    scale: 1.07;
     transition: 450ms;
     cursor: pointer;
 }
