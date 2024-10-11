@@ -74,6 +74,9 @@ header>nav>a div{
     display: flex;
     gap: 5px;
 }
+header>nav>a{
+    text-decoration: none;
+}
 
 header>nav>ul{
     display: flex;
