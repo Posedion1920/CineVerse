@@ -56,18 +56,30 @@ function getQueryParameter(){
     return query;
 }
 
-
 function showSpecificShow(show) {
-    const cleanSummary = show.summary.replace(/<\/?[^>]+(>|$)/g, "").trim();
+    const title = document.querySelector("title");
+    title.textContent = show.name;
 
-    let genres = '';
-    show.genres.forEach((genre, index) => {
-        genres += genre + (index < show.genres.length - 1 ? ', ' : '');
-    });
+    const cleanSummary = show.summary 
+        ? show.summary.replace(/<\/?[^>]+(>|$)/g, "").trim() 
+        : "No summary available";
+
+    let genres = show.genres && show.genres.length > 0
+        ? show.genres.join(', ')
+        : 'N/A';
 
     const imageUrl = (show.image && show.image.original) 
         ? show.image.original 
-        : './assets/billeder/1e02f22aad1745de5019d8e7dcd23320.png';
+        : './assets/billeder/NoIMG.png';
+
+    const country = show.network && show.network.country 
+        ? show.network.country.name 
+        : 'N/A';
+
+    const premiered = show.premiered || 'N/A';
+    const ended = show.ended || 'N/A';
+    const language = show.language || 'N/A';
+    const rating = (show.rating && show.rating.average) || 'N/A';
 
     conWrap.innerHTML += `
         <div>
@@ -75,26 +87,27 @@ function showSpecificShow(show) {
         </div>
         <div>
             <p>${cleanSummary}</p>
-            <button class="styleBN">Se deres officielle site</button>
+            <a href="${show.officialSite}"><button class="styleBN">Se deres officielle side</button></a>
         </div>
         <div>
             <h3>${show.name}</h3>
-            <p>Premiered: ${show.premiered}</p>
-            <p>Ended: ${show.ended}</p>
+            <p>Premiered: ${premiered}</p>
+            <p>Ended: ${ended}</p>
             <p>Genre: ${genres}</p>
-            <p>Rating: 7.5<i class="fa-solid fa-star"></i></p>
-            <p>Language: ${show.language}</p>
-            <p>Country: ${show.network.country.name}</p>
+            <p>Rating: ${rating}<i class="fa-solid fa-star"></i></p>
+            <p>Language: ${language}</p>
+            <p>Country: ${country}</p>
         </div>
     `;
 }
+
 
 function showSeachs(shows) {
     shows.forEach(function(post) {
         // Tjekker om billedet er null og bruger et standardbillede hvis det er
         const imageUrl = (post.show.image && post.show.image.medium) 
             ? post.show.image.medium 
-            : './assets/billeder/1e02f22aad1745de5019d8e7dcd23320.png';
+            : './assets/billeder/NoIMG.png';
 
         // Tjekker om rating er null og sætter til "n/a" hvis det er
         const rating = (post.show.rating && post.show.rating.average) 

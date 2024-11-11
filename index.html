@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineVerse</title>
-    <script src="./assets/js/app.js" defer></script>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/x-icon" href="./assets/billeder/Logo.svg">
-
     <script src="./assets/js/app.js" defer></script>
     <script src="./assets/js/index.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./assets/billeder/Logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <header>
-        <nav>
-            <a href=""> 
-                <div>
-                <h3>CineVerse</h3>
-                <img src="./assets/billeder/Logo.svg" alt="CineVerse Logo"></div>
-            </a>
-
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./Series.html">Series</a></li>
-                <li><a href="./user.html"><i class="fa-solid fa-user"></i></a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <a href="./index.html"> 
+            <div>
+            <h3>CineVerse</h3>
+            <img src="./assets/billeder/Logo.svg" alt="CineVerse Logo"></div>
+        </a>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Series.html">Series</a></li>
+        </ul>
+    </nav>
+    
     <main>
         <section class="movieSection">
-            <img id="specific" src="./assets/billeder/SeriesImage.png" alt="">
+            <picture>
+                <source media="(max-width: 1000px)" srcset="./assets/billeder/SeriesImageMobil.png">
+                <source media="(min-width: 1000px)" srcset="./assets/billeder/SeriesImage.png">
+                <img src="./assets/billeder/SeriesImage.png" alt="Beskrivelse af billede">
+              </picture>
             <div>
                 <h2>Series</h2>
                 <p>Explore our comprehensive collection of TV series, featuring the latest releases and all-time favorites. Discover in-depth information, episode guides, and reviews for the best dramas, comedies, and more. </p>
                 <p>Stay updated on trending shows and binge-worthy series across all genres. Whether you're looking for your next obsession or just curious about what's new, we've got everything you need to dive into the world of TV series – all in one place.</p>
             </div>
         </section>
-        <h3 style="text-align: center; margin-bottom: 25px; margin-top: 50px;">Five TV Series you might like</h3>
-
+        <h3 class="tvshows">Five TV Series you might like</h3>
         <section>
             <div class="gridContainer">
             </div>
@@ -50,14 +49,7 @@
             <h3>CineVerse</h3>
             <img src="./assets/billeder/Logo.svg" alt="CineVerse Logo">
         </div>
-        <h3>© 2024 CineVerse</h3>
-        <div>
-            <ul>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-x-twitter"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-            </ul>
-        </div>
-    </footer> 
+        <h3>©CineVerse</h3>
+    </footer>
 </body>
 </html>

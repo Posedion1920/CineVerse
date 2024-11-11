@@ -3,8 +3,12 @@
 
 body{
     margin: 0px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: var(--BackGroundColor);
 }
+
 
 /* Styleguide */
 :root{
@@ -51,99 +55,97 @@ nav>ul>li a{
     font-weight: 500;
     font-style: normal;
     font-size: 24px;
-}
-
-
-/* Header$Navn og foooter */
-
-header{
-    background-color: var(--BackGroundColor);
-    box-shadow: 0px 1px 7.7px rgba(0, 0, 0, 0.3);
-    height: 15vh;
-    margin-bottom: 32px;
-}
-
-header>nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 6rem 0px 6rem;
-}
-
-header>nav>a div{
-    display: flex;
-    gap: 5px;
-}
-header>nav>a{
     text-decoration: none;
-}
-
-header>nav>ul{
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    padding: 0px;
-    gap: 3.5rem;
-}
-
-nav>ul a{
     color: white;
+}
+
+nav{
+    align-items: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -5px 20px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 55px;
+}
+
+nav a {
     text-decoration: none;
+}
+
+nav div{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+nav>ul{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+@media (min-width: 1000px){
+    nav{
+        justify-content: space-between;
+    }
+    nav{
+        padding: 0px 100px 0px 32px;
+    }
 }
 
 footer{
+    margin-top: 55px;
     background-color: var(--BackGroundColor);
     box-shadow: -10px 0px 7.7px rgba(0, 0, 0, 0.25);
     height: 15vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 6.5rem;
+    gap: 1rem;
+    
 }
-
 footer div:first-of-type{
     display: flex;
     gap: 5px;
+    align-items: center;
 }
 
-footer>div>ul{
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-}
-
-footer>div>ul>li i{
-    font-size: 42px;
-}
-
-.fa-facebook{
-    color: #1877F2;
-}
-
-.fa-youtube{
-    color: #FF0000;
+@media (min-width: 1000px) {
+    footer{
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 100px 0px 32px;
+    }
 }
 
 
 /* Forside */
+
 .movieSection{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 3rem;
+    width: 80%;
+    margin: 0 auto;  
 }
 
-.movieSection div{
-    width: 445px;
-    align-self: start;
-}
-
-
-.movieSection img{
-    justify-self: end;
-}
-
-.movieSection div>p:first-of-type{
-    margin-bottom: 24px;
+@media (min-width: 1000px){
+    .movieSection{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 3rem;
+    }
+    
+    .movieSection div{
+        width: 445px;
+        align-self: start;
+    }
+    
+    
+    .movieSection img{
+        justify-self: end;
+    }
+    
+    .movieSection div>p:first-of-type{
+        margin-bottom: 24px;
+    }
 }
 
 .fa-star{
@@ -160,11 +162,36 @@ footer>div>ul>li i{
 
 .gridContainer{
     display: grid;
-    grid-template-columns: repeat(5,210px);
-    column-gap: 2.5rem;
-    row-gap: 3rem;
-    justify-content: center;
-    margin-bottom: 75px;
+    grid-template-columns: repeat(2,210px);
+    column-gap: 10px;
+    row-gap: 2rem;
+}
+
+@media (min-width: 1000px){
+    .gridContainer{
+        grid-template-columns: repeat(5,210px);
+        justify-items: center;
+        justify-content: center;
+        column-gap: 2.9rem;
+    }
+    .gridContainer a {
+        width: 220px !important;
+    }
+}
+
+.tvshows{
+    margin-top: 75px;
+    text-align: center;
+    padding-bottom: 12px;
+    font-size: 30px;
+}
+
+.gridContainer a{
+    width: 200px;
+    justify-self: center;
+}
+.card img{
+    width: 100%;
 }
 
 .gridContainer a{
@@ -178,18 +205,9 @@ footer>div>ul>li i{
     color: black;
 }
 
-.movieSection:last-of-type div{
-    width: 456px;
-}
-
-
 .card{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 450ms;
-}
-.card img{
-    width: 210px;
-    height: 298px;
 }
 
 .card:hover{
@@ -198,17 +216,23 @@ footer>div>ul>li i{
     cursor: pointer;
 }
 
+.wrapperSearch button{
+    margin: 0 auto;
+    display: block;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 32px;
+}
+
 .search input{
     border: none;
     border-radius: 100px;
     padding: 20px;
     width: 400px;
-}
-.wrapperSearch {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 20vh;
 }
 
 .search button{
@@ -225,9 +249,27 @@ footer>div>ul>li i{
     cursor: pointer;
 }
 
-.search button:hover {
-    background-color: #3E8B5B;
-    color: white; 
+
+
+@media (min-width: 1000px) {
+    .search button:hover {
+        background-color: #3E8B5B;
+        color: white; 
+    } 
+    .wrapperSearch {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 20vh;
+        gap: 6px;
+    }
+    .search button{
+        margin: 0px;
+        display: inline;
+    }
+    .search{
+        display: block;
+    }
 }
 
 
@@ -238,52 +280,66 @@ footer>div>ul>li i{
     gap: 20px;
 }
 
-
-#specific div:first-of-type{
-    display: flex;
-    justify-content: center;
+#specific{
+    width: 90%;
+    margin: 0 auto;  
 }
 
-#specific div:first-of-type img{
-    height: 400px;
+#specific div img{
+    width: 100%;
+    padding-bottom: 8px;
 }
-
-.gridconWrap{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 75px;
+#specific div:nth-of-type(2){
+    width: 100%;
 }
 
 #specific div:last-of-type{
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-    color: black;
+    margin-top: 35px;
+    padding: 32px;
     border-radius: 6px;
     background-color: white;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
-#specific div:last-of-type p{
+#specific > div:last-of-type p{
+    color: black;
+}
+#specific > div:last-of-type  h3{
     color: black;
 }
 
-#specific div:last-of-type h3{
-    color: black !important;
-    font-size: 24px !important;
-}
-
 #specific div:nth-of-type(2) p:first-of-type{
-    margin-bottom: 50px !important;
+    margin-bottom: 15px !important;
 }
-#specific div:nth-of-type(2){
-    width: 60ch;
+
+@media (min-width: 1000px) {
+    #specific{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 75px;
+    }  
+    
+    #specific img{
+        width: 400px !important;
+    }
+    #specific div:last-of-type{
+        margin-top: 0px;
+    }
+
+    #specific div:nth-last-of-type(2){
+        width: 60ch;
+    }
+    #specific div:last-of-type{
+        height: 100%;
+    }
 }
 
 
+div>a{
+    text-decoration: none;
+}
 
 .styleBN{
     background-color: #4FAA69;
@@ -310,6 +366,8 @@ footer>div>ul>li i{
 .styleBN a:hover{
     color: white;
 }
+
+
 
 
 
